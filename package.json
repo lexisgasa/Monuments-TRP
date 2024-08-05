@@ -1,0 +1,16 @@
+{
+  "name": "monuments",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}
