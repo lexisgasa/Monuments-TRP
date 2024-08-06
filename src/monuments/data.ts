@@ -1,6 +1,6 @@
 import { type Monument } from "./types";
 
-const sevenWonders: Monument[] = [
+export const sevenWonders: Monument[] = [
   {
     id: "1",
     name: "Coliseo de Roma",
