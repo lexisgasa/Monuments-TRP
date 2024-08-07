@@ -12,7 +12,7 @@
   "scripts": {
     "build": "tsc",
     "build:dev": "tsc -w",
-    "start": "node --env-file=PORT.env build/app/app.js",
+    "start": "node --env-file=.env build/app/app.js",
     "prepare": "husky"
   },
   "keywords": [],
