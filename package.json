@@ -1,7 +1,7 @@
 {
   "name": "monuments",
   "version": "1.0.0",
-  "main": "build/index.js",
+  "main": "build/app/app.js",
   "type": "module",
   "lint-staged": {
     "*.{ts,tsx}": [
@@ -12,7 +12,7 @@
   "scripts": {
     "build": "tsc",
     "build:dev": "tsc -w",
-    "start": "node .",
+    "start": "node --env-file=.env build/index.js",
     "prepare": "husky"
   },
   "keywords": [],
