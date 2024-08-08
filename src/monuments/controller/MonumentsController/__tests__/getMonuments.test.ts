@@ -10,6 +10,8 @@ describe("Given the getMonuments method of MonumentsController", () => {
     json: jest.fn(),
   };
 
+  beforeEach(() => jest.clearAllMocks);
+
   describe("When it receives a response", () => {
     test("Then it should call the response's status method with the value 200", () => {
       monumentsController.getMonuments(req as Request, res as Response);
