@@ -1,7 +1,5 @@
 import chalk from "chalk";
-import express from "express";
-
-const app = express();
+import { app } from "./app.js";
 
 export const startApp = (port: number) => {
   app.listen(port, () => {

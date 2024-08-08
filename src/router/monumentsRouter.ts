@@ -1,8 +1,8 @@
 import express from "express";
-import { monuments } from "../monuments/data.js";
+import { MonumentsController } from "../monuments/controller/MonumentsController/MonumentsController.js";
 
 export const monumentsRouter = express.Router();
 
-monumentsRouter.get("/", (_req, res) => {
-  res.json({ sevenWonders: monuments });
-});
+const monumentsController = new MonumentsController();
+
+monumentsRouter.get("/", monumentsController.getMonuments);
