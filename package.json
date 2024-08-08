@@ -14,7 +14,8 @@
     "build:dev": "tsc -w",
     "start": "node --env-file=.env build/index.js",
     "prepare": "husky",
-    "test": "jest"
+    "test": "jest",
+    "test:dev": "jest --watchAll"
   },
   "keywords": [],
   "author": "",
