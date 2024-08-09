@@ -3,7 +3,7 @@ import { MonumentsController } from "../MonumentsController";
 import { monuments } from "../../../data";
 
 describe("Given the getMonuments method of MonumentsController", () => {
-  const monumentsController = new MonumentsController();
+  const monumentsController = new MonumentsController(monuments);
   const req: Partial<Request> = {};
   const res: Partial<Response> = {
     status: jest.fn().mockReturnThis(),
