@@ -10,16 +10,18 @@ describe("Given the getMonuments method of MonumentsController", () => {
     json: jest.fn(),
   };
 
-  beforeEach(() => jest.clearAllMocks);
+  beforeEach(() => jest.clearAllMocks());
 
   describe("When it receives a response", () => {
     test("Then it should call the response's status method with the value 200", () => {
       monumentsController.getMonuments(req as Request, res as Response);
-      expect(res.status).toHaveBeenCalled();
+
+      expect(res.status).toHaveBeenCalledWith(200);
     });
 
     test("Then it should call the response's json method with a list of monuments", () => {
       monumentsController.getMonuments(req as Request, res as Response);
+
       expect(res.json).toHaveBeenCalledWith({ monuments });
     });
   });
