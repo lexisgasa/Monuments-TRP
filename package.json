@@ -15,7 +15,8 @@
     "start": "node --env-file=.env build/index.js",
     "prepare": "husky",
     "test": "jest",
-    "test:dev": "jest --watchAll"
+    "test:dev": "jest --watchAll",
+    "test:coverage": "jest --coverage"
   },
   "keywords": [],
   "author": "",
@@ -43,7 +44,6 @@
   },
   "dependencies": {
     "chalk": "^4.1.2",
-    "cors": "^2.8.5",
     "express": "^4.19.2",
     "morgan": "^1.10.0",
     "ts-jest-resolver": "^2.0.1"

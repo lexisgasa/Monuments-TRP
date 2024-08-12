@@ -4,6 +4,12 @@ export default {
   transform: {
     "^.+.tsx?$": ["ts-jest", {}],
   },
-  rootDir: "src",
   resolver: "ts-jest-resolver",
+  testMatch: ["**/src/**/*.test.ts"],
+  collectCoverageFrom: [
+    "src/**/*.ts",
+    "!src/index.ts",
+    "!src/server/**",
+    "!src/router/**",
+  ],
 };
