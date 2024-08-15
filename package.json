@@ -1,7 +1,7 @@
 {
   "name": "monuments",
   "version": "1.0.0",
-  "main": "build/app/app.js",
+  "main": "build/index.js",
   "type": "module",
   "lint-staged": {
     "*.{ts,tsx}": [
@@ -12,7 +12,8 @@
   "scripts": {
     "build": "tsc",
     "build:dev": "tsc -w",
-    "start": "node --env-file=.env build/index.js",
+    "start": "node --env-file=.env .",
+    "start:dev": "node --env-file=.env --watch .",
     "prepare": "husky",
     "test": "jest",
     "test:dev": "jest --watchAll",
