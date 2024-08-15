@@ -7,7 +7,7 @@ export const app = express();
 app.use(morgan("dev"));
 
 app.use((_req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.setHeader("Access-Control-Allow-Origin", "*");
 
   next();
 });
