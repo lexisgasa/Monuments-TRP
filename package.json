@@ -45,6 +45,7 @@
   },
   "dependencies": {
     "chalk": "^4.1.2",
+    "cors": "^2.8.5",
     "express": "^4.19.2",
     "morgan": "^1.10.0",
     "ts-jest-resolver": "^2.0.1"
