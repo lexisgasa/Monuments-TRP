@@ -2,8 +2,8 @@ import express from "express";
 import morgan from "morgan";
 import cors from "cors";
 import { monumentsRouter } from "./router/monumentsRouter.js";
-import { generalError } from "./error/generalError.js";
-import { ServerError } from "./error/ServerError.js";
+import { generalError } from "./error/generalError/generalError.js";
+import { unknownPathError } from "./error/unknownPathError/unknownPathError.js";
 
 export const app = express();
 
@@ -12,8 +12,6 @@ app.use(morgan("dev"));
 
 app.use("/monuments", monumentsRouter);
 
-app.use((_req, _res, next) => {
-  next(new ServerError("Path not found", 404));
-});
+app.use(unknownPathError);
 
 app.use(generalError);
