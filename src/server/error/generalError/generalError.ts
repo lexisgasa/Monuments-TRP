@@ -3,9 +3,9 @@ import type { ServerError } from "../ServerError";
 
 export const generalError = (
   error: Error,
-  req: Request,
+  _req: Request,
   res: Response,
-  next: NextFunction,
+  _next: NextFunction,
 ): void => {
   const statusCode = (error as ServerError).statusCode || 500;
 
