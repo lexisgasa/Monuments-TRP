@@ -1,6 +1,5 @@
 import type { Request, Response } from "express";
 import type { MonumentsControllerStructure } from "../types.js";
-import { monuments } from "../../data.js";
 import { type Monument } from "../../types.js";
 
 export class MonumentsController implements MonumentsControllerStructure {

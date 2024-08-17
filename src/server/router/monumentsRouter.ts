@@ -1,6 +1,6 @@
 import express from "express";
-import { MonumentsController } from "../monuments/controller/MonumentsController/MonumentsController.js";
-import { monuments } from "../monuments/data.js";
+import { monuments } from "../../monuments/data.js";
+import { MonumentsController } from "../../monuments/controller/MonumentsController/MonumentsController.js";
 
 export const monumentsRouter = express.Router();
 
