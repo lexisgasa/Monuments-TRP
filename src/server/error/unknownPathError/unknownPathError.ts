@@ -6,7 +6,7 @@ export const unknownPathError = (
   _res: Response,
   next: NextFunction,
 ): void => {
-  const error = new ServerError("Path not found", 404);
+  const error = new ServerError("Endpoint not found", 404);
 
   next(error);
 };
