@@ -1,7 +1,7 @@
 import type { NextFunction, Request, Response } from "express";
 import { ServerError } from "../ServerError.js";
 
-export const unknownPathError = (
+export const unknownEndpointError = (
   _req: Request,
   _res: Response,
   next: NextFunction,
