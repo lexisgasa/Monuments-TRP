@@ -1,5 +1,5 @@
 import { type NextFunction, type Request, type Response } from "express";
-import { unknownPathError } from "../unknownPathError";
+import { unknownEndpointError } from "../unknownEndpointError";
 import { ServerError } from "../../ServerError";
 
 describe("Given the unknownPathError function", () => {
@@ -13,7 +13,7 @@ describe("Given the unknownPathError function", () => {
       const next: NextFunction = jest.fn().mockReturnThis();
       const error = new ServerError("Endpoint not found", 404);
 
-      unknownPathError(req as Request, res as Response, next);
+      unknownEndpointError(req as Request, res as Response, next);
 
       expect(next).toHaveBeenCalledWith(error);
     });

@@ -3,8 +3,8 @@ import morgan from "morgan";
 import cors from "cors";
 import { serverRouter } from "./router/serverRouter.js";
 import { generalError } from "./error/generalError/generalError.js";
-import { unknownPathError } from "./error/unknownPathError/unknownPathError.js";
 import { monumentsRouter } from "../monuments/router/monumentsRouter.js";
+import { unknownEndpointError } from "./error/unknownEndpointError/unknownEndpointError.js";
 
 export const app = express();
 
@@ -15,6 +15,6 @@ app.use("/monuments", monumentsRouter);
 
 app.use("/ping", serverRouter);
 
-app.use(unknownPathError);
+app.use(unknownEndpointError);
 
 app.use(generalError);
